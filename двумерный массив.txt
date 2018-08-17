@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba3_massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] myArr = new int[5];
+            int[,] myTwoArr = new int[5, 6];
+            int sum = 0;
+            Random ran = new Random();
+
+            for (int i = 1; i <= 5; i++)
+            {
+                myArr[i - 1] = ran.Next(1, 20);
+                for (int j = 1; j <= 6; j++)
+                {
+                    myTwoArr[i - 1, j - 1] = ran.Next(1, 30);
+                }
+            }
+            foreach (int fVar in myArr)
+                Console.WriteLine("{0} в квадрате равно {1}", fVar, fVar * fVar);
+
+            Console.WriteLine();
+
+            foreach (int fTwoVar in myTwoArr)
+                sum += fTwoVar;
+
+            Console.WriteLine("Сумма элементов многомерного массива: {0}", sum);
+
+            Console.ReadLine();
+        }
+    }
+}

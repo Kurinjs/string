@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Book1 f;
+            f.RegisterNumber = 13314134;
+            f.Autor = "Juan Royling";
+            f.NameBook = "Harry Potter";
+            f.DatePublication = 2000;
+            f.NumberOfPages = 1400;
+            Book2 s;
+            s.RegisterNumber = 124124251;
+            s.Autor = "Mihail Flenov";
+            s.NameBook =" Fruts ";
+            s.DatePublication =1899;
+            s.NumberOfPages = 1231;
+            string book = Console.ReadLine(); 
+            if(book=="Harry Poter"|| book == "Poter " || book == "Harry" ||book =="H")
+            {
+                f.BookYearsOld(2018, 2000);
+            }
+            if (book == "F" || book == "Fru" || book == "Fruts")
+            {
+                f.BookYearsOld(2018, 1899);
+            }
+            Console.ReadKey();
+        }
+    }
+}
+struct Book1
+{
+    public int RegisterNumber;
+    public string Autor;
+    public string NameBook;
+    public int DatePublication;
+    public int NumberOfPages;
+    public void BookYearsOld(int NowDays, int DatePublication)
+    {
+        Console.WriteLine(NowDays - DatePublication);
+        Console.WriteLine("Book years old");
+    }
+}
+struct Book2
+{
+    public int RegisterNumber;
+    public string Autor;
+    public string NameBook;
+    public int DatePublication;
+    public int NumberOfPages;
+    public void BookYearsOld(int NowDays, int DatePublication)
+    {
+        Console.WriteLine(NowDays - DatePublication);
+        Console.Write("Book years old");
+    }
+}

@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace library
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input x = ");
+            Console.Write("Input y = ");
+            int y = 2;
+            int x = -2;
+            lib.Class1.Quater(x, y);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lib
+{
+    public class Class1
+    {
+        public static void Quater(int x , int y)
+        {
+            if (x > 0 || y > 0)
+            {
+                Console.WriteLine("This is first quater");
+            }
+            if (x < 0 || y > 0)
+            {
+                Console.WriteLine("This is second quater");
+            }
+            if (x < 0 || y < 0)
+            {
+                Console.WriteLine("This is third quater");
+            }
+            if (x > 0 || y < 0)
+            {
+                Console.WriteLine("This is four quater");
+            }
+        }
+    }
+}

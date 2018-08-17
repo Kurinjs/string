@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ырср1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int z, a = int.Parse(Console.ReadLine()), b = int.Parse(Console.ReadLine());
+            z = a / b;
+            Console.WriteLine(z);
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace I33
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int k;
+            Console.Write("Input h1= ");
+            int h1 = int.Parse(Console.ReadLine());
+            Console.Write("Input b1= ");
+            int b1 = int.Parse(Console.ReadLine());
+            k = 2 / b1 * h1;
+            int t;
+            Console.Write("Input h2= ");
+            int h2 = int.Parse(Console.ReadLine());
+            Console.Write("Input b2= ");
+            int b2 = int.Parse(Console.ReadLine());
+            t = 2 / b2 * h2;
+            if (k > t)
+            {
+                Console.WriteLine("First win");
+                Console.WriteLine(k);
+
+            }
+            else if (k < t)
+            {
+                Console.WriteLine("Second win");
+                Console.WriteLine(t);
+            }
+
+            else
+            {
+                Console.WriteLine("first=second");
+            }
+            Console.ReadKey();
+        }
+
+    }
+}

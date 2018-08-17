@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace II34
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] massiv = new int[20];
+
+            Random rand = new Random();
+            for (int i = 0; i < 20; i++)
+            {
+                massiv[i] = rand.Next(1, 100);
+                
+                if (massiv[i] % 2 == 0 && massiv[i] % 5 == 0)
+                {
+                    Console.Write(" Task : ", massiv[i]);
+                    Console.WriteLine(massiv[i]);
+                }
+                else if (massiv[i] % 2 == 1 && massiv[i] % 5 == 0 || massiv[i] % 2 == 0 && massiv[i] % 5 == 1)
+                {
+                    continue;
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}

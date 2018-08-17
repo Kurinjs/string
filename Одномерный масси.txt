@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float[] massivv = new float[16];
+            Random ran = new Random();
+            for (int i = 0; i < 16; i++)
+            {
+                massivv[i] = ran.Next(-20, 20);
+                Console.WriteLine(massivv[0]);
+                Console.WriteLine(massivv[i]);
+                if (massivv[i] <= massivv[i++])
+                {
+                    Console.WriteLine("More first value");
+                    
+                }
+                else if (massivv[i] > massivv[++i])
+                {
+                    Console.WriteLine("Next: ");
+                }
+
+            }
+            Console.ReadKey();
+        }
+    }
+}

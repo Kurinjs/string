@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nasledovanie
+{
+    class Program
+    {
+        
+        static public int firstkatet = int.Parse(Console.ReadLine());
+        static public int secondkatet = int.Parse(Console.ReadLine());
+        static void Main(string[] args)
+        {
+            Console.WriteLine("input first katet {0}", firstkatet);
+            Console.WriteLine("input first katet {0}", secondkatet);
+            float result;
+            result = (firstkatet * secondkatet) / 2;
+            Class1.V(result);
+            Console.ReadLine();
+        }
+
+
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nasledovanie
+{
+    class Class1 : Program
+    {
+        public static void V(float result)
+        {
+            Console.Write("INput hight: ");
+            int hight = int.Parse(Console.ReadLine());
+            double V;
+            Console.WriteLine(V = result * hight);
+            Console.ReadLine();
+        }
+
+
+    }
+}
+
+

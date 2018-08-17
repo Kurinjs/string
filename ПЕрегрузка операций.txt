@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace overloading
+{
+    class Program
+    {
+        public string Value { get; set; }
+        public static int operator +(Program c1, Program c2)
+        {
+            return string.Compare(c1.Value,c2.Value);
+        }
+        public static void Main(string[] args)
+        {
+            Console.Write("Input first word: ");
+            Program c1 = new Program { Value = Console.ReadLine() };
+            Console.Write("Input first word: ");
+            Program c2 = new Program { Value = Console.ReadLine() };
+          
+            Console.WriteLine(c1.Value+c2.Value);
+
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace laba_3
+{
+    class Program
+    {
+        public const double PI = Math.PI;
+        static void Main(string[] args)
+        {
+            double t,speed = 9.81;
+            int lenght = int.Parse(Console.ReadLine());
+            t = 2 * PI * Math.Sqrt(lenght / speed);
+            Console.WriteLine(t);
+            Console.ReadKey();
+
+        }
+    }
+}

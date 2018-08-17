@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace St
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            GetUserData();
+            Console.ReadLine();
+        }
+        static void GetUserData()
+        {
+            Console.Write("Input first word: ");
+            string FirtsNumber = Console.ReadLine();
+            Console.Write("Input second word: ");
+            string SecondNumber = Console.ReadLine();
+            int result = String.Compare(FirtsNumber, SecondNumber);
+            if (result < 0)
+            {
+                Console.WriteLine("First win");
+            }
+            else if (result > 0)
+            {
+                Console.WriteLine("Second win");
+            }
+            else
+            {
+                Console.WriteLine("First=Second");
+            }
+            Console.ReadKey();
+        }
+    }
+}

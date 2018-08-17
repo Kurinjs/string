@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace @enum
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Flights evia = new Flights();
+            Console.WriteLine(" 1-Kiev, 2-London, 3-Chicago, 4-Minsk");
+            Console.Write("You have chouse 5 citys output where you want:  ");
+            int ava = int.Parse(Console.ReadLine());
+            if (ava < 1 || ava > 5)
+            {
+                Console.WriteLine("We dont have flight");
+            }
+            if (ava == 1)
+            {
+                Console.WriteLine("To {0}", Avia.Kiev);
+                Console.WriteLine("Date {0}:{1}:{2}", evia.year = 2012, evia.month = 11, evia.day = 29);
+                Console.WriteLine("Ticket Prise: {0} ", evia.TicketPrice = 15000);
+                Console.WriteLine("Number Flight: {0}", evia.NumberFlight = 1341345);
+                Console.WriteLine("Depature Time: {0}", evia.DepartureTime = "12:00");
+                Console.WriteLine("Number of seats: {0}", evia.NumberOfSeats = 252);
+            }
+            if (ava == 2)
+            {
+                Console.WriteLine("To {0}", Avia.London);
+                Console.WriteLine("Date {0}:{1}:{2}", evia.year = 2012, evia.month = 11, evia.day = 29);
+                Console.WriteLine("Ticket Prise = {0}", evia.TicketPrice = 15000);
+                Console.WriteLine("Number Flight: {0}", evia.NumberFlight = 1341345);
+                Console.WriteLine("Depature Time: {0}", evia.DepartureTime = "14:00");
+                Console.WriteLine("Number of seats: {0}", evia.NumberOfSeats = 350);
+            }
+            if (ava == 3)
+            {
+                Console.WriteLine("To {0}", Avia.Chicago);
+                Console.WriteLine("Date {0}:{1}:{2}", evia.year = 2012, evia.month = 11, evia.day = 29);
+                Console.WriteLine("Ticket Prise = {0} ", evia.TicketPrice = 15000);
+                Console.WriteLine("Number Flight: {0}", evia.NumberFlight = 1341345);
+                Console.WriteLine("Depature Time: {0}", evia.DepartureTime = "11:35");
+                Console.WriteLine("Number of seats: {0}", evia.NumberOfSeats = 150);
+            }
+            if (ava == 4)
+            {
+                Console.WriteLine("To {0}", Avia.Minsk);
+                Console.WriteLine("Date {0}:{1}:{2}", evia.year = 2012, evia.month = 11, evia.day = 29);
+                Console.WriteLine("Ticket Prise = {0}", evia.TicketPrice = 15000);
+                Console.WriteLine("Number Flight: {0}", evia.NumberFlight = 1341345);
+                Console.WriteLine("Depature Time: {0}", evia.DepartureTime = "9:46");
+                Console.WriteLine("Number of seats: {0}", evia.NumberOfSeats = 520);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+enum Avia { Kiev, London, Chicago, Minsk };
+struct Flights
+{
+
+    public int NumberFlight;
+    public string DepartureTime;
+    public int year;
+    public int month;
+    public int day;
+    public int TicketPrice;
+    public int NumberOfSeats;
+
+}
+

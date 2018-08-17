@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace func
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (double x = -1; x < 2; x += 0.15)
+            {
+                Console.WriteLine(x);
+                fuc1(x);
+            }
+            Console.ReadLine();
+        }
+        static void fuc1(double x)
+        {
+           
+            if (x < 0)
+            {
+                for (int k = 0; k < 9; k++)
+                {
+                    Console.Write("X<0= ");
+                    Console.WriteLine(Math.Pow(k, x));
+                }
+            }
+
+            if (x > 0)
+            {
+                Console.Write("X>0= ");
+                Console.WriteLine((Math.Log(Math.Abs(Math.Sqrt(x)))));
+
+            }
+
+
+        }
+    }
+}

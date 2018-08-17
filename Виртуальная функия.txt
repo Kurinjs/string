@@ -1,0 +1,118 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace _virtual
+{
+    class Shape
+    {
+        public const double PI = Math.PI;
+        protected double x, y;
+        public Shape(double x, double y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+        public virtual double Area()
+        {
+            return x * y;
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("input first value = ");
+            double r = double.Parse(Console.ReadLine());
+            Console.Write("input second value = ");
+            double h = double.Parse(Console.ReadLine());
+            Shape c = new Circle(r);
+            Shape s = new Sphere(r);
+            Shape l = new Cylindeer(r, h);
+            // Display results:
+            Console.WriteLine("Area of Circle   = {0:F2}", c.Area());
+            Console.WriteLine("Area of Sphere   = {0:F2}", s.Area());
+            Console.WriteLine("Area of Cylinder = {0:F2}", l.Area());
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _virtual
+{
+    class Circle : Shape
+    {
+        public Circle(double r) : base(r, 0)
+        {
+
+        }
+        public override double Area()
+        {
+            return PI * x * x;
+        }
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _virtual
+{
+    class Sphere : Shape
+    {
+        public Sphere(double f) : base(f, 0)
+        {
+        }
+        public override double Area()
+        {
+            return 4 * PI * x * x; 
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _virtual
+{
+    class Cylindeer : Shape
+    {
+        public Cylindeer(double r, double h) : base(r, h)
+        {
+
+        }
+        public override double Area()
+        {
+            return 2 * PI * x * x + 2 * PI * x * y;
+        }
+    }
+}
+
+
+
+
